@@ -1,0 +1,23 @@
+while(!heap.empty())
+{
+//Write min element to the output vector, then remove from heap
+output_list[out_index] = heap.top();
+heap.pop();
+cout  << "Top is now: " << heap.top() << endl << endl;
+out_index++;
+
+//If popped element was the last in its row, pop next min from heap
+if(!(nth_curr_column[min_row] < input_lists.size())){
+
+output_list[out_index] = heap.top();
+heap.pop();
+out_index++;
+}
+else{ // Push successor into the queue into the queue
+
+heap.push(
+nth_curr_column[min_row] += 1; //Increment the column "pointer" for the appropriate row
+min_row = getMin(input_lists, nth_curr_column);
+}
+}
+}

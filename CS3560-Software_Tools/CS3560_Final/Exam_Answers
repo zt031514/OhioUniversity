@@ -1,0 +1,10 @@
+Task A
+
+	Part 1: Valgrind with curl
+
+	Curl released all of its allocations before exiting, and it did not leak any memory while 		running.
+
+	Part 2 : Valgrind with wc
+	
+	Again, wc returned all of the bytes it allocated, and no memory was lost while the program 		was running. The test file used was this file before typing this sentence.
+

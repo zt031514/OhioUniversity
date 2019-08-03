@@ -1,0 +1,1 @@
+select race.name tshirt_size, count(tshirt_size) from ((runners join participates_in on racer_id = racer_id) join races on race_id = race_id) group by tshirt_size;

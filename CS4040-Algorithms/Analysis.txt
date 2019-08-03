@@ -1,0 +1,160 @@
+Analysis.txt
+
+Zach Tumbleson - P100246918
+CS4040
+Homework 4
+Date: 10-24-18
+
+******************************************************
+
+1.) Discussion of High Level tasks and Complexity
+
+	a.) Start by using the select algorithm described in the book (Page 220, 
+		Introduction to Algorithms, Cormen et. al) to find the jth and kth 
+		largest elements in the list. The steps for this algorithm are readily
+		available, and it runs in O(n) time. Since we run it twice, the runtime for 
+		this step is:
+
+			T(n) = O(n) + O(n)
+
+		which is 2 * O(n), which is still roughly O(n).
+
+	b.) After determining the indices of the jth and kth largest elements, compare them to see
+		which has the larger gpa. Then iterate through the list and collect all the elements with
+		a GPA between the jth and kth largest and return them as a vector.
+
+		The comparison in this step runs in constant time ( O(1) ), and the iteration runs in O(n),
+		so the runtime for step 2 is:
+
+			T(n) = O(1) + O(n)
+
+		which is also O(n).
+
+	c.) Combining both steps, the time analysis becomes:
+
+		T(n) = 2 * O(n) + O(1) + O(n)
+
+		simplifying,
+
+		T(n) = 3 * O(n) + O(1)
+
+		this can be reduced to:
+
+		T(n) = O(n)
+
+2.) Design breakdown for inbetweenGPA() and Space complexity
+	
+	a.) Design breakdown
+
+		To allow inbetweenGPA to do its job without taking up too many lines of code, several helper 
+		functions are needed to perform incremental steps towards the final goal of returning the 
+		list of students in between the given values. First, using the select algorithm described in
+		the tex requires an insertion sort function, a function to find the medians, and a parititoning
+		function. To satisfy these requirements, I created the following functions: 
+
+			void insertion_sort(vector<Student> &list, int start, int end, size_t &num_compares);
+	
+			vector<Student> get_medians(vector<Student> list, size_t &num_compares);
+	
+			int partition(vector<Student> &list, const int p, const int r, size_t &num_compares);
+
+		Each function performs its titular function: the insertion sort function sorts the part of 
+		the list indicated by start and end, the get_medians function returns a vector of the indices that
+		correspond to the students with median GPAs, and the parititon function parititions the list
+		around the median of the medians.
+
+		The selection algorithm is implemented in the linear_gpa_select function:
+
+			Student linear_gpa_select(vector <Student> list, const size_t target, size_t &num_compares);
+
+		This function takes the list, and a target GPA ranking value, and returns the Student with 
+		the desired GPA ranking.
+
+		After completing the selection algorithm, I created the following function to iterate through
+		the list and return any students with a GPA in between the jth and kth values.
+
+			vector<Student> gpa_in_Range(vector <Student> list, const double low, const double high, size_t &num_compares);
+
+		Since the kth largest value may be smaller than the jth highest, or vice versa, this function is
+		called using high and low to avoid that bug. 
+
+		My inbetweenGPA() function follows the steps from part 1, calling linear_gpa_select twice, once
+		to get the jth highest value, and once to get the kth highest value. After that, gpa_in_Range 
+		is called in one of two ways, depending on the values of the jth and kth largest GPAs. 
+
+	b.) Space complexity
+
+		i.) insertion_sort()
+
+			The insertion_sort function does the sorting in place, with a by-reference list parameter,
+			and only creates 3 other variables, 2 loop iterators, i and j, and a currentStudent variable
+			containing the student being sorted. As a result the space complexity for insertion_sort is:
+
+			S(n) = O(3)
+
+		ii.) get_medians()
+
+			 Get medians is passed a new copy of the list each time it is called, but since the list is 
+			 parititioned into groups of 5, it can only be called log_5(n) times. The function itself 
+			 creates a few other variables, but the dominating one is the medians vector, which is of 
+			 size n / 5, since one median is required per group. The space complexity for this becomes:
+
+			 S(n) = O(n / 5) + O(4) + O( log_5(n) )= O(n)
+
+		iii.) partition
+
+				The partition function also takes the list as a reference parameter, and only creates a
+				handful of local variables, so its space complexity is similar to insertion sort:
+
+			S(n) = O(3)
+
+		iv.) linear_gpa_select()
+
+			The linear select function uses each of the three functions above and returns a single student, so
+			its space complexity becomes:
+
+			S(n) = O(3) + O(n /5) + O(4) + O(log_5(n)) + O(3)
+
+			S(n) = O(n / 5)
+
+			Since this function is called recursively, a maximum of log_5(n) times, its total space complexity is
+
+			S(n) = O(n / 5 * log_5(n)) or ~O(nlogn)
+
+		v.) gpa_in_range
+
+			gpa_in_range creates and returns a vector that has a size of up to the size of the original list, so its
+			space complexity is:
+
+			S(n) = O(n)
+
+
+		vi.) inbetweenGPA()
+
+			inbetweenGPA() calls linear_gpa_select() twice, and then calls gpa_in_range, making its space complexity:
+
+			S(n) = O(n) + O(nlogn) or S(n) ~ O(nlogn)
+
+3.) Discussion of high level tasks for inbetweenAlpha()
+
+	The time and space complexities are identical for inbetweenAlpha(). The only differences come in the number
+	of comparisons required to distinguish names that match in the first_name or last_name value. Since the 
+	comparsons are last name, then first name, then SSN, the total number of comparisons will be a constant 
+	multiple of the comparisons for inbetweenGPA.
+
+	The structure for the helper functions for inbetweenAlpha() is also similar; inbetweenAlpha calls linear_name_select,
+	which uses the select algorithm to find the jth and kth largest names in the list. Linear_name_select in turn calls
+	insertion_sort_alpha, get_medians_alpha, and partition_alpha. After returning from linear_name_select, inbetweenAlpha
+	then calls name_in_range and returns the vector of students with names within the desired range.
+
+
+4.) Apology for drastically underestimating the time needed to complete this assignment.
+
+	Obviously, the above describes a program that should hypothetically work, if I had started early enough to
+	complete it. Some of the helper functions for inbetweenAlpha are not declared, and many of the functions 
+	are empty or contain filler return values. prog1.cc demonstrates the parts of the project that I did get working, including a function to create test students.
+
+
+
+
+

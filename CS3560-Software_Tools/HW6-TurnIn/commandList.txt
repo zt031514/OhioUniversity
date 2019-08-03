@@ -1,0 +1,51 @@
+Zach Tumbleson
+zt0311514
+HW6 - 9-29-2016
+
+List of Commands used to complete Homework 6:
+/////////////////////////////////////////////
+
+-git clone https://github.com/zt031514/HW6
+-cd HW6
+//Downloaded source folder from blackboard and sent to HW6 directory
+-make game
+-./game
+-ls
+-make clean
+-git add -A
+-git status
+-git commit -m "Version 1 Source Code"
+-git push
+-git push --tags
+-nano README.md
+-git add -A
+-git commit -m "Changed README.md to HW6"
+-git status
+-git push
+-sudo apt-get install doxygen
+-nano colors.h
+-nano game.cc
+-nano game.h
+-nano main.cc
+-nano othello.cc
+-nano othello.h
+-nano piece.h
+-nano makefile
+-doxygen -g
+-doxygen Doxyfile
+-make all
+-make clean
+-git add -A
+-git status
+-git commit -m "Added structured Doxygen comments to source files and revised makefiles to include Documentation generation."
+-git tag v2.DocReady -m "Version 2, Documentation Ready"
+-git push --tags
+-git tag
+-git log --stat
+make all
+mv html /home/zach/Desktop
+mv latex /home/zach/Desktop
+make clean
+exit
+
+//END OF LIST

@@ -1,0 +1,27 @@
+Script started on Fri Mar 01 21:52:33 2019
+bash-3.2$ pl
+Welcome to SWI-Prolog (Version 3.1.2)
+Copyright (c) 1993-1998 University of Amsterdam.  All rights reserved.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- [compiler_friendly_hw6.pl]   ]  ].
+compiler_friendly_hw6 compiled, 0.00 sec, 5,440 bytes.
+
+Yes
+2 ?- grandmother(X,zach).
+
+X = judy ;
+
+X = shelby ;
+
+No
+3 ?- sit ster(X,s zach).
+
+X = rachel ;
+
+No
+4 ?- halt.
+bash-3.2$ exit
+
+script done on Fri Mar 01 21:53:19 2019

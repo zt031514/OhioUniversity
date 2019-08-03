@@ -1,0 +1,60 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/cpu_tb_isim_beh.exe -prj C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/cpu_tb_beh.prj work.cpu_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/oneBitALU.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/fourBitALU.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/sixteenBitALU.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/thirtyTwoBitALU.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/SignExtension.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/RegisterFile.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/ProgramCounter.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/PCAdder.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/MUX5Bit2To1.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/Mux32Bit2To1.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/LeftShifterWithDiscard.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/LeftShifterTwoBits.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/instructionMemory.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/dataMemory.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/Control.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/BEQAdderv.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/ALUOpToALIControl.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/ee3613cpu.v" into library work
+Analyzing Verilog file "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/cpu_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:329 - "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/thirtyTwoBitALU.v" Line 47: Target <disconnected> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/sixteenBitALU.v" Line 40: Target <disconnected> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/sixteenBitALU.v" Line 41: Target <disconnected> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/sixteenBitALU.v" Line 42: Target <disconnected> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/fourBitALU.v" Line 42: Target <disconnected> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/fourBitALU.v" Line 43: Target <disconnected> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/fourBitALU.v" Line 44: Target <disconnected> of concurrent assignment or output port connection should be a net type.
+Completed static elaboration
+Compiling module ProgramCounter
+Compiling module PCAdder
+Compiling module LeftShifterTwoBits
+Compiling module InstructionMemory
+Compiling module Control
+Compiling module Mux5Bit2To1
+Compiling module RegisterFile
+Compiling module SignExtension
+Compiling module Mux32Bit2To1
+Compiling module ALUOpToALIControl
+Compiling module OneBitALU
+Compiling module fourBitALU
+Compiling module sixteenBitALU
+Compiling module thirtyTwoBitALU
+Compiling module dataMemory
+Compiling module LeftShifterWithDiscard
+Compiling module BEQAdderv
+Compiling module ee3613cpu
+Compiling module cpu_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 20 Verilog Units
+Built simulation executable C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/cpu_tb_isim_beh.exe
+Fuse Memory Usage: 28756 KB
+Fuse CPU Usage: 640 ms

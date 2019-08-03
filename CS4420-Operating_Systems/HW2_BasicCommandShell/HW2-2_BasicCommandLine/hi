@@ -1,0 +1,12 @@
+total 820
+---------- 1 root root  3945 Nov 21 00:48 helpers.h
+-rw-rw-rw- 1 root root     0 Nov 21 02:16 hi
+-rw-rw-rw- 1 root root   515 Nov 21 01:50 hi.txt
+---------- 1 root root   613 Nov 19 12:57 Makefile
+-rwxrwxrwx 1 root root 42600 Nov 21 02:12 mybash
+---------- 1 root root  4780 Nov 21 00:43 mybash.c
+-rw-rw-rw- 1 root root 51840 Nov 21 02:12 mybash.o
+-rw-rw-rw- 1 root root  6489 Nov 19 10:55 parser.c
+---------- 1 root root   855 Nov 19 14:45 parser.h
+-rw-rw-rw- 1 root root 17240 Nov 21 02:12 parser.o
+-rwxrwxrwx 1 root root    16 Nov 19 13:00 run.sh

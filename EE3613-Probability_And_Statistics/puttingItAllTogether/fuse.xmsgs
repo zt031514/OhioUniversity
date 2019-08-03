@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/thirtyTwoBitALU.v" Line 47: Target &lt;<arg fmt="%s" index="1">disconnected</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/sixteenBitALU.v" Line 40: Target &lt;<arg fmt="%s" index="1">disconnected</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/sixteenBitALU.v" Line 41: Target &lt;<arg fmt="%s" index="1">disconnected</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/sixteenBitALU.v" Line 42: Target &lt;<arg fmt="%s" index="1">disconnected</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/fourBitALU.v" Line 42: Target &lt;<arg fmt="%s" index="1">disconnected</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/fourBitALU.v" Line 43: Target &lt;<arg fmt="%s" index="1">disconnected</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/aaa/Desktop/Projects/PuttingItAllTogether/fourBitALU.v" Line 44: Target &lt;<arg fmt="%s" index="1">disconnected</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+</messages>
+
