@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f0\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Assignment 10 - Due April 22, in class \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b0\fs24 \cf2 Peter Norvig has kindly put a simple Common LISP Eliza program from his book, Paradigms of AI Programming, in the public domain. This assignment is to implement your own simple chatbot, using and extending the available code.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b \cf2 Notes about your Chatbot: 
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Change the prompt in the Eliza code to display your own name. Then change the code so that your chatbot responds to the user in your own way. Be sure to remove Eliza's original responses, so that the you-bot does not sound like a psychoanalyst. Feel free to limit the chatbot's scope to a particular interest of yours, such as movies or basketball or food. \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Unlike Norvig's Eliza, your chatbot should never respond with NIL. Come up with some reasonable defaults, like, "Oh, that's very interesting..." for uncovered situations. \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Cover as many situations as possible. Your chatbot should include significantly more conversational replies than Peter Norvig's original. \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b \cf2 Notes about Norvig's Code: 
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 There are two files, AUXFNS.LSP and ELIZA1.LSP, in our Blackboard LISP repository. \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 To run ELIZA1.LSP, you need to load AUXFNS.LSP and then ELIZA1.LSP into the interpreter. \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Fully understanding the auxiliary functions in AUXFNS.LSP is beyond the scope of this class. Take advantage of modular abstraction and use the included functions without worrying about their guts. (Note that you don't actually use most of this code. This is the auxiliary file for his whole book.) \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 You can and should understand the ELIZA1.LSP file. However, you should expect it to take some time for you to understand it. Some new functions are used, and some familiar functions are used with new names. For example, Norvig has adopted the style of calling car 
+\f2\i first 
+\f1\i0 and cdr 
+\f2\i rest.
+\f1\i0  \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The ELIZA1.LSP code is (intentionally) not very complete. One irritating feature is that Eliza does not know how to exit when you say goodbye. Implement this small extension before implementing your chatbot, both to familiarize yourself with the code and to make the code easier to test. Your chatbot must be able to exit gracefully. \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b \cf2 Turn in: 
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 A paragraph describing your chatbot and explaining why someone might like to chat with it \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your complete LISP program, appropriately commented \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 A printed typescript of your system holding a conversation \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 To get a printed typescript containing a LISP session in a file, right before you enter the interpreter, enter 
+\f0\b script 
+\f1\b0 at the UNIX prompt. This will save everything you do in a file named typescript. (It is a good idea to rename this file ASAP, because each time you do this the old typescript file is overwritten.) When you are finished working in the interpreter, enter
+\f0\b  <Control> D 
+\f1\b0 at the UNIX prompt. This will stop saving your work and close the typescript file.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 This assignment is to be turned in, on paper, in class. Email submissions are not acceptable for this assignment. \
+}

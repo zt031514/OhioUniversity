@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f0\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Assignment 6 - Due March 6, in class \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b0\fs24 \cf2 The purpose of this assignment is for you to become familiar with the Prolog interpreter.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Define facts to represent your own family, descending from your grandparents. Include your four grandparents, the children of your grandparents, and the children of these children. Include facts for the predicates father, mother, male, and female, as they apply to all of these people. Add comments to the code telling who each family member is in relation to you. \uc0\u8232 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Define the Prolog predicate grandmother(A,B) to mean that A is B's grandmother, and use it to find your own grandmothers. Note that your grandmothers are your mother's mother and your father's mother. For purposes of this exercise, you need only consider biological or adoptive parents and grandparents, not step parents. You may include as many rules as you need to help you define grandmother(A,B). However, the only predicates you may use as facts are father and mother. Test this predicate at the Prolog interpreter prompt with the query 
+\f0\b grandmother(X,your_name_goes_here)
+\f1\b0 . \uc0\u8232 Use the semi-colon (;) to elicit all possible responses. \u8232 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Define the Prolog predicate sister(A,B) to mean that A is B's sister. Note that your sisters are your female siblings. Siblings are people who share one or both parents, including brothers and sisters, half-brothers and half-sisters. You may include as many rules as you need to help you define sister(A,B). However, the only predicates you may use as facts are father, mother, male, and female. Test this predicate at the Prolog interpreter prompt with the query 
+\f0\b sister(X,your_name_goes_here)
+\f1\b0 . \uc0\u8232 Use the semi-colon (;) to elicit all possible responses. \u8232 If 
+\f2\i and only if
+\f1\i0  you do not have any sisters, create an imaginary sister for testing purposes. You may do this by giving your father an imaginary daughter, Sister Imaginary. \uc0\u8232 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 To capture your Prolog session in a file, right before you enter Prolog, enter 
+\f0\b script 
+\f1\b0 at the UNIX prompt. This will save everything you do in a file named typescript. (It is a good idea to rename this file ASAP, because each time you do this the old typescript file is overwritten.) When you are finished working in the interpreter, enter
+\f0\b  <Control> D 
+\f1\b0 at the UNIX prompt. This will stop saving your work and close the typescript file. \
+Turn in both your Prolog program file and the typescript file you create to capture your Prolog session. \
+This assignment is to be turned in on paper, during class. Email submissions are not acceptable for this assignment. \
+}
